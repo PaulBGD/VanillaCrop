@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>VanillaCrop</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <style>
+        html,
+        body {
+            height: 100%;
+        }
+        
+        /*#container {
+            -webkit-touch-callout: none;
+            -webkit-user-select: none;
+            -khtml-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+        
+        #image {
+            pointer-events: none;
+        }*/
+    </style>
+</head>
+
+<body>
+    <div id="container">
+        <img id="image" src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png" />
+    </div>
+    
+    <script src="https://code.jquery.com/pep/0.4.1/pep.js"></script>
+    <script src="/index.js"></script>
+    <script>
+        new VanillaCrop(document.getElementById('container'), document.getElementById('image'));
+    </script>
+</body>
+</html>
