@@ -66,11 +66,9 @@ class VanillaCrop {
         this.crop.style.left = this.leftCrop + 'px';
         this.crop.style.width = (this.rightCrop - this.leftCrop) + 'px';
         this.crop.style.height = (this.bottomCrop - this.topCrop) + 'px';
-        console.log(this.image.offsetHeight, this.image.offsetWidth);
     }
 
     private _onDown = (event: MouseEvent) => {
-        console.log('down', MousePosition[this.getMousePosition(event.clientX || event.pageX, event.clientY || event.pageY)]);
         this.dragging = this.getMousePosition(event.clientX || event.pageX, event.clientY || event.pageY);
         this.initialDrag = this.lastCoords;
     };
@@ -103,7 +101,6 @@ class VanillaCrop {
                     this.bottomCrop += changeY;
                     this.leftCrop += changeX;
                     this.rightCrop += changeX;
-                    // console.log(changeX, chang?eY);
                     break;
                 case MousePosition.TOP:
                     this.topCrop = Math.max(Math.min(this.lastCoords.y, this.bottomCrop - this.options.minHeight), 0);
